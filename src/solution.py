@@ -10,7 +10,6 @@ d_dictionary = {
     "a_list[3]": "false",
 }
 
-_name_ = "_main_"
 start_integer = 1
 random_integer = random.randint(3, 20)
 
@@ -20,14 +19,15 @@ def concatenate_with_limit(phrase, condition, num, num_limit):
         while num <= num_limit:
             print(phrase + str(num))
             num += 1
-        print("\nConcatenation done with limit " + "\" " + str(num_limit) + " \"")
+        # print("\nConcatenation done with limit " + "\" " + str(num_limit) + " \"")
+        print(f"\nConcatenation done with limit \" {num_limit} \"")
     elif condition == "Not_valid_Key":
         print("\nNot a valid condition Key!")
     else:
         print("\nNo right condition for concatenation!")
 
 
-if _name_ == "_main_":
+if __name__ == "__main__":
     concatenate_with_limit((a_list[0]),
                            (d_dictionary.get("a_list[2]", "Not_valid_Key")),
                            start_integer, random_integer)
